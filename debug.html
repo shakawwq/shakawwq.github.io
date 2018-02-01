@@ -15,7 +15,7 @@
 		jsbridge("{'uri':'window','method':'nav','data':'login?name=1234567890'}");
 	}
 	function jsbridge(msg) {
-		if (userAgent.indexOf('iPhone') || userAgent.indexOf('iOS')) {
+		if (navigator.userAgent.indexOf('iPhone') || userAgent.indexOf('iOS')) {
 			window.webkit.messageHandlers.JShandle.postMessage(msg);
         	} else {
 			prompt(msg);
